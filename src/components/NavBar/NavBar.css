@@ -1,0 +1,48 @@
+.buscardor {
+    width: 500px;
+}
+
+Form .boton_buscar {
+    margin-right: 20px;
+    border-color: #FFF6E0;
+    color: #FFF6E0;
+
+}
+
+Form .boton_buscar:hover {
+    background-color: #FE502D;
+    border-color: #FFF6E0;
+    color: #FFF6E0;
+}
+
+.navbar-toggler-icon {
+    background-color: #FFF6E0;
+}
+
+.logo {
+    width: 250px;
+}
+
+.navbar.bg-body-tertiary .navbar-brand,
+.navbar.bg-body-tertiary .navbar-nav .nav-link {
+    color: #FFF6E0;
+}
+
+.navbar.bg-body-tertiary {
+    background-color: #272829 !important;
+}
+
+.navbar.bg-body-tertiary .navbar-brand,
+.navbar.bg-body-tertiary .navbar-nav .nav-link:hover {
+    color: #FE502D;
+}
+
+.items_menu .dropdown-menu .dropdown-item {
+    background-color: transparent;
+    color: #272829;
+}
+
+.items_menu .dropdown-menu .dropdown-item:hover {
+    color: #FE502D;
+    background-color: transparent;
+}
