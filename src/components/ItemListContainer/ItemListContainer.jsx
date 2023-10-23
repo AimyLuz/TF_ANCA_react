@@ -41,24 +41,6 @@ const ItemListContainer = ({ greeting }) => {
       }, [categoryId]);
         
   
-
-{/*    useEffect(() => {
-      const asyncFunc = categoryId ? getProductByCategory : getProducts;
-      asyncFunc(categoryId)
-        .then(response => {
-          if (Array.isArray(response)) {
-            console.log('Datos de productos válidos:', response); 
-            setProducts(response);
-          } else {
-            console.error('Los datos de productos no están en el formato esperado.');
-          }
-        })
-        .catch(error => {
-          console.error(error);
-        });
-  
-    }, [categoryId]);
-  */}
     return (
       <div>
         <h1>{greeting}</h1>
