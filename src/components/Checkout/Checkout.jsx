@@ -4,6 +4,7 @@ import { CartContext } from "../../context/CartContext";
 import { collection, serverTimestamp, writeBatch, addDoc, getDocs, query, where } from "firebase/firestore";
 import './checkout.css';
 import Button from "react-bootstrap/Button";
+import Img from './assets/86ff4dc131b2abf4df40bc99d5b83794.jpg';
 
 const Checkout = () => {
     const[user, setUser] = useState({})
@@ -42,6 +43,7 @@ return (
         ?<div>
         <h2>Felicitaciones! Tu orden fue generada con éxito!</h2>
         <h5>Su id de registro es: {orderId}</h5>
+        <img src={Img}/>
         </div>
         : 
         <div className="form">
