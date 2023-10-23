@@ -1,3 +1,5 @@
+export { db } from './services/firebase/firebaseConfig'
+
 /*const products = [
     {
         id: '1',

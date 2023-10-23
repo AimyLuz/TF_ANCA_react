@@ -88,7 +88,7 @@ function NavBar() {
             />
             <Button variant="outline-success boton_buscar">Buscar</Button>
           </Form>
-          <CartWidget />
+          <NavLink style={{textDecoration:'none'}}to='/cart'><CartWidget /></NavLink>
         </Navbar.Collapse>
       </Container>
     </Navbar>

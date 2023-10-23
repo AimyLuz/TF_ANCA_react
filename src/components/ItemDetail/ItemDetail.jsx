@@ -8,14 +8,13 @@ import { CartContext } from '../../context/CartContext';
 
 const ItemDetail = ({ id, name, img, carruselDos, carruselTres, price, stock, description }) => {
     const [quantityAdded, setQuantityAdded] = useState(0)
-
-    const { addItem } = useContext(CartContext)
+    const { addItem }= useContext(CartContext)
 
     const handleOnAdd = (quantity) => {
         setQuantityAdded(quantity)
 
             const item = {
-                id, name, price
+                id, name, price, img
             }
             addItem(item, quantity)
     }
