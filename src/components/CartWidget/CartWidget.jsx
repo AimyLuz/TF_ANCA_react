@@ -16,8 +16,3 @@ const CartWidget = () => {
     )
 }
 export default CartWidget;
-{/*            <Link to='/cart' className='CartWidget' style={{display: totalQuantity > 0 ? 'block': 'none'}}>
-            <img src={cart} alt="cart-widget" />
-            { totalQuantity}
-            </Link>
-         */}

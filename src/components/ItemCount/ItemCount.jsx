@@ -1,12 +1,12 @@
 import './ItemCount.css';
 import Button from "react-bootstrap/Button";
-import {useState} from 'react';
+import { useState } from 'react';
 
-const ItemCount = ({stock, initial, onAdd}) => {
+const ItemCount = ({ stock, initial, onAdd }) => {
     const [quantity, setQuantity] = useState(initial)
 
     const increment = () => {
-        if(quantity < stock) {
+        if (quantity < stock) {
             setQuantity(quantity + 1)
         }
     }
@@ -24,7 +24,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 <Button variant="dark" className='Button' onClick={increment}>+</Button>
             </div>
             <div>
-                <Button variant="dark" className='Button Agregar' onClick={()=> onAdd(quantity)} disabled={!stock}>
+                <Button variant="dark" className='Button Agregar' onClick={() => onAdd(quantity)} disabled={!stock}>
                     Agregar al carrito
                 </Button>
             </div>

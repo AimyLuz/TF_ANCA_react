@@ -8,15 +8,15 @@ import { CartContext } from '../../context/CartContext';
 
 const ItemDetail = ({ id, name, img, carruselDos, carruselTres, price, stock, description }) => {
     const [quantityAdded, setQuantityAdded] = useState(0)
-    const { addItem }= useContext(CartContext)
+    const { addItem } = useContext(CartContext)
 
     const handleOnAdd = (quantity) => {
         setQuantityAdded(quantity)
 
-            const item = {
-                id, name, price, img
-            }
-            addItem(item, quantity)
+        const item = {
+            id, name, price, img
+        }
+        addItem(item, quantity)
     }
 
     return (
@@ -53,9 +53,9 @@ const ItemDetail = ({ id, name, img, carruselDos, carruselTres, price, stock, de
             <footer className='ItemFooterDetail'>
                 {
                     quantityAdded > 0 ? (
-                        
+
                         <Button variant="dark" className='Button' ><Link to='/cart' className='Terminar'> Terminar Compra</Link></Button>
-                        
+
                     ) : (
                         <ItemCount initial={1} stock={10} onAdd={handleOnAdd} />
                     )

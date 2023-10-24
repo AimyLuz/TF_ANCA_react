@@ -1,23 +1,23 @@
 import { createContext, useState } from "react";
-export const CartContext = createContext ({})
+export const CartContext = createContext({})
 
-export const CartProvider = ( { children }) => {
-    const [cart, setCart] = useState ([])
+export const CartProvider = ({ children }) => {
+    const [cart, setCart] = useState([])
 
     console.log(cart)
 
     const addItem = (item, quantity) => {
-       if(isInCart(item.id)){
-        setCart(cart.map((product) => {
-            if(product.id === item.id){
-            return {...product, quantity: product.quantity + quantity}
+        if (isInCart(item.id)) {
+            setCart(cart.map((product) => {
+                if (product.id === item.id) {
+                    return { ...product, quantity: product.quantity + quantity }
+                } else {
+                    return product
+                }
+            }))
         } else {
-            return product
+            setCart([...cart, { ...item, quantity }])
         }
-        }))
-       } else {
-        setCart([...cart, {...item, quantity}])
-       }
     }
 
     const clearCart = () => {
@@ -28,19 +28,19 @@ export const CartProvider = ( { children }) => {
     }
 
     const deleteItem = (id) => {
-    setCart(cart.filter((item)=> item.id !== id))
+        setCart(cart.filter((item) => item.id !== id))
     }
 
     const cartQuantity = () => {
-        return cart.reduce((acc, item)=> acc + item.quantity,  0)
+        return cart.reduce((acc, item) => acc + item.quantity, 0)
     }
 
     const total = () => {
-        return cart.reduce((acc, item)=> acc + item.quantity * item.price, 0)
+        return cart.reduce((acc, item) => acc + item.quantity * item.price, 0)
     }
     return (
-        <CartContext.Provider value={{ cart, addItem, deleteItem, clearCart, cartQuantity, total}}>
-                { children }
+        <CartContext.Provider value={{ cart, addItem, deleteItem, clearCart, cartQuantity, total }}>
+            {children}
         </CartContext.Provider>
     )
 }

@@ -17,19 +17,19 @@ import Checkout from './components/Checkout/Checkout';
 function App() {
   return (
     <div className="App">
-    <CartProvider>
-    <BrowserRouter className='App_browser'>
-    <NavBar />
-    <Routes>
-      <Route  path="/" element={<ItemListContainer  greeting={'♪✭Todo lo que necesitás para triunfar✭♪'}/>} />
-      <Route  path="/category/:categoryId" element={< ItemListContainer greeting={'Productos por categoría'}/>} />
-      <Route  path="/item/:itemId" element={<ItemDetailContainer />} />
-      <Route path='/cart' element={<Cart />}/>
-      <Route path='/checkout' element={<Checkout />} />
-      <Route  path='*' element={<h1>404 NOT FOUND</h1>}/>
-    </Routes>
-    </BrowserRouter>
-    </CartProvider>
+      <CartProvider>
+        <BrowserRouter className='App_browser'>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<ItemListContainer greeting={'♪✭Todo lo que necesitás para triunfar✭♪'} />} />
+            <Route path="/category/:categoryId" element={< ItemListContainer greeting={'Productos por categoría'} />} />
+            <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/checkout' element={<Checkout />} />
+            <Route path='*' element={<h1>404 NOT FOUND</h1>} />
+          </Routes>
+        </BrowserRouter>
+      </CartProvider>
     </div>
   );
 }
